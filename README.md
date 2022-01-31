@@ -2,7 +2,7 @@
 # Resumen
  * El FrontEnd se realizo en la plataforma de VISUAL STUDIO CODE y se utilizo el Framework Angular para el desarrollo de la aplicacion Web, que asu vez se conectara mediante WebServices al BackEnd que fue desarrollado en SPRINGBOOT.  
 
-* El FrontEnd esta levantado en un contenedor el cual se despliega en el navegador con el siguiente url: http://localhost:8083/api/v1/usuarios, en las que graficamente podemos realizar los CRUD y consumir el WebService del BackEnd.  
+* El FrontEnd esta levantado en un contenedor el cual se despliega en el navegador con el siguiente url: http://localhost:8083, en las que graficamente podemos realizar los CRUD y consumir el WebService del BackEnd.  
 
 * En el FrontEnd Automaticamente cuando se inicie observaremos todos los usuarios que estan registrado, a su vez tenemos un Formulario en la que nos permitira ingresar, actualizar y eliminar usuarios de la BD.  
 
