@@ -4,7 +4,7 @@
 
 * La BD utilizada para el almacenamiento de informacion es MongoDB, es una BD NOSQL en las que no ayuda flexibilidad al momento de la creacion de Schema.  
 
-* El Back y la BD estan contenerizado y ejecutandose por debajo. En las que nos ayudara a ahorrar muchos recursos.  
+* El Back y la BD estan levantados en contenedores. En las que nos ayudara a ahorrar muchos recursos.  
 
 # Orquestación del MongoDB
 Para la orquestacion de la BD se utilizaron los siguientes comandos desde la consola:
