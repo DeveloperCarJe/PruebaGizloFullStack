@@ -10,4 +10,5 @@ Los comandos que usaste y todo eso.
 que se fue de oreja??
 
 Este comando debes ponerlo en la receta para deplegar el front end, ya que con este comando creas las carpeta node_modules, por eso no la subimos en el repositorio de git.
-´npm install´
+`npm install`
+es la otr comilla que esta inclinida al otro lado.
