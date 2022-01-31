@@ -1,27 +1,34 @@
-# FrontEndAngularGizlo
+# FrontEnd Usuarios.
+# Resumen
+ * El FrontEnd se realizo en la plataforma de VISUAL STUDIO CODE y se utilizo el Framework Angular para el desarrollo de la aplicacion Web, que asu vez se conectara mediante WebServices al BackEnd que fue desarrollado en SPRINGBOOT.  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+* El FrontEnd esta levantado en un contenedor el cual se despliega en el navegador con el siguiente url: http://localhost:8083/api/v1/usuarios, en las que graficamente podemos realizar los CRUD y consumir el WebService del BackEnd.  
 
-## Development server
+* En el FrontEnd Automaticamente cuando se inicie observaremos todos los usuarios que estan registrado, a su vez tenemos un Formulario en la que nos permitira ingresar, actualizar y eliminar usuarios de la BD.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Levantamiento del proyecto  
 
-## Code scaffolding
+Almento que el proyecto es descargado para posibles actualizaciones o el uso de aprendizaje, se debe ejecutar desde el terminar el siguiente comando:  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  npm install  
+  
+# Orquestacion y Generar Build del proyecto  
 
-## Build
+1.- Desde el terminal se debe ejecutar el siguiente comando para generar el Build(/dist)  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ng build --prod  
+    
+2.- Archivo DockerFile  
 
-## Running unit tests
+    FROM nginx:1.17.1-alpine
+    COPY /dist/front-end-angular-gizlo /usr/share/nginx/html  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3.- Ejecutar desde la terminal la creacion de la imagen:  
 
-## Running end-to-end tests
+    docker build -t angularapp .  
+    
+4.- Leventar el contenedor:  
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    docker run -p 8083:80 --name prueba-angular-docker -d angularapp  
+    
+![Docker Angular](https://raw.githubusercontent.com/DeveloperCarJe/PruebaGizloFullStack/master/Capturas/Angular.PNG)
